@@ -1,0 +1,21 @@
+{
+  "name": "supports-sparse-files",
+  "version": "0.0.0",
+  "description": "Test if a file system supports sparse files",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/supports-sparse-files.git"
+  },
+  "bin": {
+    "supports-sparse-files": "./bin.js"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/supports-sparse-files/issues"
+  },
+  "homepage": "https://github.com/mafintosh/supports-sparse-files"
+}
