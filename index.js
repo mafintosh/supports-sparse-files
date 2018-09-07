@@ -17,7 +17,7 @@ function sparseFiles (dir, cb) {
         done(null, after.blocks !== before.blocks)
       })
     })
-  
+
     function writeAndStat (pos, cb) {
       fs.write(fd, Buffer.from([0xff]), 0, 1, pos, function (err) {
         if (err) return cb(err)
@@ -30,6 +30,7 @@ function sparseFiles (dir, cb) {
         if (err) return cb(err)
         fs.unlink(path.join(dir, '.sparse-test'), function (err) {
           if (err) return cb(err)
+          if (error) return cb(error)
           cb(null, sparse)
         })
       })
