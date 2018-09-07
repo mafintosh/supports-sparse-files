@@ -14,7 +14,7 @@ function sparseFiles (dir, cb) {
       if (err) return done(err, false)
       writeAndStat(0, function (err, after) {
         if (err) return done(err, false)
-        done(null, after.blocks !== before.blocks)
+        done(null, after.blocks === undefined || after.blocks !== before.blocks)
       })
     })
 
