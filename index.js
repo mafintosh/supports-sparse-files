@@ -20,7 +20,7 @@ function sparseFiles (dir, cb) {
   
     function writeAndStat (pos, cb) {
       fs.write(fd, Buffer.from([0xff]), 0, 1, pos, function (err) {
-        if (err) cb(err)
+        if (err) return cb(err)
         fs.fstat(fd, cb)
       })
     }
